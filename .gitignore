@@ -3,6 +3,9 @@ _site
 .sass-cache
 .vagrant
 
+# draft folder
+_posts/_drafts/
+
 # general
 .DS_Store
 Thumbs.db
