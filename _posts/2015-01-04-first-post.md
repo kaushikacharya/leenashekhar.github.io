@@ -6,4 +6,4 @@ image: /img/hello_world.jpeg
 
 This is my first post, how exciting!
 
-$$y = x^2$$
+$y = x^2$
