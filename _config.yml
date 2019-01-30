@@ -17,13 +17,13 @@ baseurl: ""
 title: Leena's website
 
 # Short description of your site
-description: A virtual proof that name is awesome!
+#description:
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+#  About Me: "aboutme"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
@@ -64,7 +64,7 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
+  name: Leena Shekhar
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
