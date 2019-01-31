@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Deriving KL Divergence
-image: /img/kale_divergence.jpg
+title: First Post!
 ---
 
 Testing MathJax
