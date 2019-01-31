@@ -18,7 +18,7 @@ More specifically,
 $$
 \begin{align*}
 
-KL(q \|\| p) &= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
+&= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
 &= -\int q(z) \log p(z) dz + \int q(z) \log p(z) dz \\
 &= \int q(z) \log \frac{q(z)}{p(z)}
 
