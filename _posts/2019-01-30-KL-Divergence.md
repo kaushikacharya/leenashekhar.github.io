@@ -25,9 +25,9 @@ KL(q \|\| p) &= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
 \end{align*}
 $$
 
-## How to derive KL Divergence?
+## How to derive KL Divergence for Gaussian distributions?
 
-We know that PDF of Gaussian distribution can be written us:
+We know that PDF of Gaussian distribution can be written as:
 
 $$
 \begin{align*}
