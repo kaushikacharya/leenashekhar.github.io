@@ -4,26 +4,26 @@ title: Deriving KL Divergence
 image: /img/kale_divergence.jpg
 ---
 
-If you read/implement machine learning (and application) papers, there is a high probability that you have come across Kullback–Leibler divergence a.k.a. KL divergence loss. I frequently stumble upon it when I read about latent variable models (like VAEs). I am almost sure all of us know what the term means (don't worry if you don't as I have provided a brief explanation below and Google wil get you hundreds of resources on it), but may not have actually derived it till the end. In my opinion, deriving this term would make its implementaion much clearer. 
+If you read (implement) machine learning (and application) papers, there is a high probability that you have come across Kullback–Leibler divergence a.k.a. KL divergence loss. I frequently stumble upon it when I read about latent variable models (like VAEs). I am almost sure all of us know what the term means (don't worry if you don't as I have provided a brief explanation below and Google wil get you hundreds of resources on it), but may not have actually derived it till the end. In my opinion, deriving this term would make its implementaion much clearer. 
 
 Below, I derive the KL divergence in case of univariate Gaussian distrbutions, which can be extended to the multivariate case as well [1](#references).
 
 ## What is KL Divergence?
 
-KL divergence is a measure of how one probability distribution differs (in our case _q_) from the reference probability distribution (in our case _p_). Its valuse is always >= 0. Though, I should remind you that it is not a distance metric as it is not symmetric (KL(q \|\| p) is not equivalent to KL(p \|\| q)). 
+KL divergence is a measure of how one probability distribution differs (in our case _q_) from the reference probability distribution (in our case _p_). Its valuse is always >= 0. Though, I should remind you that it is not a distance metric as it is not symmetric, KL(q \|\| p) is not equivalent to KL(p \|\| q). 
 
 KL(q \|\| p ) = Cross Entropy(q, p) - Entropy (q), where _q_ and _p_ are two univariate Gaussian distributions.
 
 More specifically,
-$$
+\[
 \begin{align*}
 
-&= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
+KL(q || p) &= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
 &= -\int q(z) \log p(z) dz + \int q(z) \log p(z) dz \\
 &= \int q(z) \log \frac{q(z)}{p(z)}
 
 \end{align*}
-$$
+\]
 
 ## How to derive KL Divergence for Gaussian distributions?
 
@@ -111,6 +111,6 @@ The above equation can be easily implemented in frameworks like Pytorch. I hope 
 
 ## References:
 
-1. Auto-Encoding Variational Bayes by Kingma and Welling.
-2. KL-divergence as an objective function by Tim Vieira.
+1. [Auto-Encoding Variational Bayes by Kingma and Welling](https://arxiv.org/abs/1312.6114)
+2. [KL-divergence as an objective function by Tim Vieira](https://timvieira.github.io/blog/post/2014/10/06/kl-divergence-as-an-objective-function/)
 3. Allison Chaney for the post image.
