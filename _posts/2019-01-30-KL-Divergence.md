@@ -8,11 +8,11 @@ If you read/implement machine learning (and application) papers, there is a high
 
 Below, I derive the KL divergence in case of univariate Gaussian distrbutions, which can be extended to the multivariate case as well [1](#references).
 
-##What is KL Divergence?
+## What is KL Divergence?
 
-KL divergence is a measure of how one probability distribution differs (in our case q) from the reference probability distribution (in our case p). Its valuse is always >= 0. Though, I should remind yo that it is not a distance metric as it is not symmetric. To put into equation \(\begin{align*}KL(q || p) \not\equiv KL(p || q)\end{align*}\).
+KL divergence is a measure of how one probability distribution differs (in our case q) from the reference probability distribution (in our case _p_). Its valuse is always >= 0. Though, I should remind you that it is not a distance metric as it is not symmetric. To put into equation $$\begin{align*} KL(q || p) \not\equiv KL(p || q) \end{align*}$$.
 
-$$KLD(q || p ) = Cross Entropy(q, p) - Entropy (q)$$, where $$q$$ and $$p$$ are two univariate Gaussian distributions.
+$$KL(q || p ) = Cross Entropy(q, p) - Entropy (q)$$, where _q_ and _p_ are two univariate Gaussian distributions.
 
 More specifically,
 
@@ -26,7 +26,7 @@ KL(q || p) &= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
 \end{align*}
 $$
 
-##How to derive KL Divergence?
+## How to derive KL Divergence?
 
 We know that PDF of Gaussian distribution can be written us:
 
@@ -50,9 +50,9 @@ $$
 $$
 
 Let's also assume that we have that our two distributions have parameters as follows:
-$$q(z) \sim N(\mu, \sigma^2)$$ and $$p(z) \sim N(0, 1)$$. 
+$$\begin{align*} q(z) \sim N(\mu, \sigma^2) \end{align*}$$ and $$\begin{align*} p(z) \sim N(0, 1) \end{align*}$$. 
 
-To add some more context in terms of latent variable models, we try to fit an approximate posterior to the true posterior by minimizing the *reverse KL divergence* (computationally better than the forward one, read more here [2](#References)). Think of $$z$$ as the latent variable, $$q(z)$$ as the approximate distribution and $$p(z)$$ as the prior distribution. Usually, we model $$q$$ and $$p$$ as Gaussian distributions. Prior distribution is assumed to have mean of 0 and variance of 1 (standard Normal distribution) and parameters of $$q$$ are the output of the inference (encoder) network.
+To add some more context in terms of latent variable models, we try to fit an approximate posterior to the true posterior by minimizing the *reverse KL divergence* (computationally better than the forward one, read more here [2](#references)). Think of _z_ as the latent variable, _q(z)_ as the approximate distribution and _p(z)_ as the prior distribution. Usually, we model _q_ and _p_ as Gaussian distributions. Prior distribution is assumed to have mean of 0 and variance of 1 (standard Normal distribution) and parameters of _q_ are the output of the inference (encoder) network.
 
 Now, let's look at Cross Entropy and Entropy seperately for ease of evaluation. 
 
@@ -81,9 +81,9 @@ $$
 \end{align*}
 $$
 
-Note that integral over a PDF is always 1 $$\int q(z) dz &= 1$$.
+Note that integral over a PDF is always 1 $$\begin{align*} \int q(z) dz &= 1 \end{align*}$$.
 
-And, expecttaion over square of a random variable is equivalent to sum of square of mean and variance $$\int z^2 q(z) dz = \mu^2 + \sigma^2$$.
+And, expecttaion over square of a random variable is equivalent to sum of square of mean and variance $$\begin{align*} \int z^2 q(z) dz = \mu^2 + \sigma^2 \end{align*}$$.
 
 **Cross Entropy - Entropy**
 
@@ -98,7 +98,7 @@ KL(q || p) &= \frac{1}{2} \log(2 \pi) + \frac{1}{2} (\mu ^2 + \sigma^2) - \frac{
 \end{align*}
 $$
 
-By stretch of the imagination, the above equation could be generalized to multivariate cases (D dimensions) by summing over all the dimensions:
+By stretch of the imagination, the above equation could be generalized to multivariate cases (_D_ dimensions) by summing over all the dimensions:
 
 $$
 \begin{align*}
@@ -110,7 +110,7 @@ $$
 
 The above equation can be easily implemented in frameworks like Pytorch. I hope the post helped you understand this concept a little better!
 
-##References:
+## References:
 
 1: Auto-Encoding Variational Bayes by Kingma and Welling.
 2: KL-divergence as an objective function by Tim Vieira.
