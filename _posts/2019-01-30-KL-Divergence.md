@@ -10,9 +10,21 @@ Below, I derive the KL divergence in case of univariate Gaussian distrbutions, w
 
 ## What is KL Divergence?
 
-KL divergence is a measure of how one probability distribution differs (in our case q) from the reference probability distribution (in our case _p_). Its valuse is always >= 0. Though, I should remind you that it is not a distance metric as it is not symmetric. To put into equation $$\begin{align*} KL(q || p) \not\equiv KL(p || q) \end{align*}$$.
+KL divergence is a measure of how one probability distribution differs (in our case _q_) from the reference probability distribution (in our case _p_). Its valuse is always >= 0. Though, I should remind you that it is not a distance metric as it is not symmetric. To put into equation 
+$$
+\begin{align*} 
 
-$$KL(q || p ) = Cross Entropy(q, p) - Entropy (q)$$, where _q_ and _p_ are two univariate Gaussian distributions.
+KL(q || p) \not\equiv KL(p || q) 
+
+\end{align*}
+$$.
+
+$$
+\begin{align*}
+
+KL(q || p ) = Cross Entropy(q, p) - Entropy (q)
+\end{align*}
+$$, where _q_ and _p_ are two univariate Gaussian distributions.
 
 More specifically,
 
@@ -112,6 +124,6 @@ The above equation can be easily implemented in frameworks like Pytorch. I hope 
 
 ## References:
 
-1: Auto-Encoding Variational Bayes by Kingma and Welling.
-2: KL-divergence as an objective function by Tim Vieira.
-3: Allison Chaney for the post image.
+1. Auto-Encoding Variational Bayes by Kingma and Welling.
+2. KL-divergence as an objective function by Tim Vieira.
+3. Allison Chaney for the post image.
