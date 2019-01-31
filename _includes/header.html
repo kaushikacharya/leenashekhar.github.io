@@ -37,7 +37,7 @@
 		  
 		  {% if include.type == "post" %}
 		  <span class="post-meta" style="text-align: center" >Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
-          <span class="post-meta" style="text-align: center" >Reading time: {{ page.minutes}}</span>
+          <span class="post-meta" style="text-align: center" >Reading time {{ page.reading_time}}</span>
 		  {% endif %}
         </div>
       </div>
