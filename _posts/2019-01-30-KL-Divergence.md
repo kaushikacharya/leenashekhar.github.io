@@ -27,7 +27,7 @@ KL(q || p) &= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
 \end{align*}
 $$
 
-## How to derive KL Divergence for Gaussian distributions?
+## KL Divergence for Gaussian distributions?
 
 We know that PDF of Gaussian distribution can be written as:
 
@@ -109,7 +109,7 @@ KL(q || p) &= - \frac{1}{2} \sum_{d=1}^{D} (1 + \log(\sigma^2) + - \mu^2 - \sigm
 \end{align*}
 $$
 
-The above equation can be easily implemented in frameworks like Pytorch. I hope the post helped you understand this concept a little better!
+The above equation can be easily implemented in frameworks like Pytorch. I hope the post helped you to understand this concept a little better!
 
 ## References:
 
