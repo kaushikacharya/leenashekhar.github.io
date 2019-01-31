@@ -4,7 +4,7 @@ title: Deriving KL Divergence
 image: /img/kale_divergence.jpg
 ---
 
-If you read/implement machine learning (and application) papers, there is a high probability that you have come across Kullback–Leibler divergence a.k.a. KL divergence loss. I frequently stumble upon i when I read about latent variable models (like VAEs). I am almost sure all of us know what the term means (don't worry if you don't as I have provided a brief explanation below and Google wil get you hundreds of resources on it), but may not have actually derived it till the end. In my opinion, deriving this term would make its implementaion much clearer. 
+If you read/implement machine learning (and application) papers, there is a high probability that you have come across Kullback–Leibler divergence a.k.a. KL divergence loss. I frequently stumble upon it when I read about latent variable models (like VAEs). I am almost sure all of us know what the term means (don't worry if you don't as I have provided a brief explanation below and Google wil get you hundreds of resources on it), but may not have actually derived it till the end. In my opinion, deriving this term would make its implementaion much clearer. 
 
 Below is my attempt to do so in case of univariate Gaussian distrbutions, which can be extended to the multivariate case as well [1].
 
@@ -12,9 +12,7 @@ Below is my attempt to do so in case of univariate Gaussian distrbutions, which 
 
 KL divergence is a measure of how one probability distribution differs (in our case q) from the reference probability distribution (in our case p). Its valuse is always >= 0. Though, I should remind yo that it is not a distance metric as it is not symmetric. To put into equation:
 
-\begin{align*}
-KL(q || p) \not KL(p || q)
-\end{align*}
+<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{align*}&space;KL(q&space;||&space;p)&space;\not&space;KL(p&space;||&space;q)&space;\end{align*}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\begin{align*}&space;KL(q&space;||&space;p)&space;\not&space;KL(p&space;||&space;q)&space;\end{align*}" title="\begin{align*} KL(q || p) \not KL(p || q) \end{align*}" /></a>
 
 KLD(q || p ) = Cross Entropy(q, p) - Entropy (q), where q and p are two univariate Gaussian distributions.
 
