@@ -10,7 +10,7 @@ Below, I derive the KL divergence in case of univariate Gaussian distrbutions, w
 
 ##What is KL Divergence?
 
-KL divergence is a measure of how one probability distribution differs (in our case q) from the reference probability distribution (in our case p). Its valuse is always >= 0. Though, I should remind yo that it is not a distance metric as it is not symmetric. To put into equation \(KL(q || p) \not\equiv KL(p || q)\).
+KL divergence is a measure of how one probability distribution differs (in our case q) from the reference probability distribution (in our case p). Its valuse is always >= 0. Though, I should remind yo that it is not a distance metric as it is not symmetric. To put into equation \(\begin{align*}KL(q || p) \not\equiv KL(p || q)\end{align*}\).
 
 $$KLD(q || p ) = Cross Entropy(q, p) - Entropy (q)$$, where $$q$$ and $$p$$ are two univariate Gaussian distributions.
 
