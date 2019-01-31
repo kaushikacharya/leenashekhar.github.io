@@ -2,6 +2,7 @@
 layout: post
 title: Deriving KL Divergence
 image: /img/kale_divergence.jpg
+mathjax: true
 ---
 
 If you read (implement) machine learning (and application) papers, there is a high probability that you have come across Kullback–Leibler divergence a.k.a. KL divergence loss. I frequently stumble upon it when I read about latent variable models (like VAEs). I am almost sure all of us know what the term means (don't worry if you don't as I have provided a brief explanation below and Google wil get you hundreds of resources on it), but may not have actually derived it till the end. In my opinion, deriving this term would make its implementaion much clearer. 
@@ -15,7 +16,7 @@ KL divergence is a measure of how one probability distribution differs (in our c
 KL(q \|\| p ) = Cross Entropy(q, p) - Entropy (q), where _q_ and _p_ are two univariate Gaussian distributions.
 
 More specifically,
-\[
+$$
 \begin{align*}
 
 KL(q || p) &= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
@@ -23,7 +24,7 @@ KL(q || p) &= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
 &= \int q(z) \log \frac{q(z)}{p(z)}
 
 \end{align*}
-\]
+$$
 
 ## How to derive KL Divergence for Gaussian distributions?
 
