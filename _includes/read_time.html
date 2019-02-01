@@ -12,7 +12,7 @@
 {% endif %}
 
 {% if minutes <= 1 %}
-    {% assign reading_time = '1' | append: ' minute' %}
+    1 minute
 {% else %}
-    {% assign reading_time = minutes | append: ' minutes' %}
+    {{ minutes }} minutes
 {% endif %}
