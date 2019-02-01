@@ -61,9 +61,9 @@
 		  {% endif %}
 		  
 		  {% if include.type == "post" %}
-		  <span class="post-meta" style="text-align: center">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
+		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}   </span>
+          <span class="post-meta" style="text-align: right">{% include read_time.html %}</span> 
 		  {% endif %} 
-          <span class="post-meta" style="text-align: center">{% include read_time.html %}</span> 
         </div>
       </div>
     </div>
