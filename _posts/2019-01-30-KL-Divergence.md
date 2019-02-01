@@ -82,9 +82,9 @@ $$
 \end{align*}
 $$
 
-Note that integral over a PDF is always 1 $$\begin{align*} \int q(z) dz &= 1 \end{align*}$$.
-
-And, expecttaion over square of a random variable is equivalent to sum of square of mean and variance $$\begin{align*} \int z^2 q(z) dz = \mu^2 + \sigma^2 \end{align*}$$.
+Note that:
+1. The integral over a PDF is always 1 $$\begin{align*} \int q(z) dz &= 1 \end{align*}$$.
+2. And, expectation over square of a random variable is equivalent to sum of square of mean and variance $$\begin{align*} \int z^2 q(z) dz = \mu^2 + \sigma^2 \end{align*}$$.
 
 **Cross Entropy - Entropy**
 
