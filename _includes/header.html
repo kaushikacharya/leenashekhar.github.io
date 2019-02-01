@@ -61,9 +61,13 @@
 		  {% endif %}
 		  
 		  {% if include.type == "post" %}
-		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
           <div>
-          <span class="post-meta" style="text-align: right">{% include read_time.html %}</span> 
+            <i class="fa fa-calendar"></i>
+		    <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
+          </div>
+          <div>
+            <i class="fa fa-clock-o"></i>
+            <span class="post-meta">{% include read_time.html %}</span> 
           </div>
 		  {% endif %} 
         </div>
