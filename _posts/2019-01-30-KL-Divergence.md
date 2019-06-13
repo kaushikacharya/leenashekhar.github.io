@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deriving KL Divergence
+title: Deriving KL Divergence for Gaussians
 image: /img/kale_divergence.jpg
 mathjax: true
 ---
