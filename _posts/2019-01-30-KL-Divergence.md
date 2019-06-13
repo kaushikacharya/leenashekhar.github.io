@@ -7,7 +7,7 @@ mathjax: true
 
 If you read (implement) machine learning (and application) papers, there is a high probability that you have come across Kullback–Leibler divergence a.k.a. KL divergence loss. I frequently stumble upon it when I read about latent variable models (like VAEs). I am almost sure all of us know what the term means (don't worry if you don't as I have provided a brief explanation below and Google wil get you hundreds of resources on it), but may not have actually derived it till the end. In my opinion, deriving this term would make its implementation much clearer. 
 
-Below, I derive the KL divergence in case of univariate Gaussian distrbutions, which can be extended to the multivariate case as well [1](#references).
+Below, I derive the KL divergence in case of univariate Gaussian distributions, which can be extended to the multivariate case as well [1](#references).
 
 ## What is KL Divergence?
 
@@ -21,7 +21,7 @@ $$
 \begin{align*}
 
 KL(q || p) &= -\int q(z) \log p(z) dz - (- \int q(z) \log q(z) dz ) \\
-&= -\int q(z) \log p(z) dz + \int q(z) \log p(z) dz \\
+&= -\int q(z) \log p(z) dz + \int q(z) \log q(z) dz \\
 &= \int q(z) \log \frac{q(z)}{p(z)}
 
 \end{align*}
