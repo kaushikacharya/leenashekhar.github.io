@@ -51,7 +51,7 @@ $$
 $$
 
 Let's also assume that we have that our two distributions have parameters as follows:
-$$\begin{align*} q(z) \sim N(\mu, \sigma^2) \end{align*}$$ and $$\begin{align*} p(z) \sim N(0, 1) \end{align*}$$. 
+$q(z) \sim N(\mu, \sigma^2)$ and $p(z) \sim N(0, 1)$. 
 
 To add some more context in terms of latent variable models, we try to fit an approximate posterior to the true posterior by minimizing the *reverse KL divergence* (computationally better than the forward one, read more here [2](#references)). Think of _z_ as the latent variable, _q(z)_ as the approximate distribution and _p(z)_ as the prior distribution. Usually, we model _q_ and _p_ as Gaussian distributions. Prior distribution is assumed to have mean of 0 and variance of 1 (standard Normal distribution) and parameters of _q_ are the output of the inference (encoder) network.
 
