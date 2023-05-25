@@ -75,7 +75,7 @@ $$
 $$
 \begin{align*}
 
--\int q(z) \log q(z) dz &= \int q(z) [\frac{1}{2} \log (2 \pi \sigma^2) + \frac{1}{2 \sigma^2} (z - \mu)^2] dz \\
+-\int q(z) \log p(z) dz &= \int q(z) [\frac{1}{2} \log (2 \pi) + \frac{1}{2} z^2] dz \\
 &= \frac{1}{2} \log (2 \pi) \int q(z) dz + \frac{1}{2} \int z^2 q(z) dz \\
 &= \frac{1}{2} \log(2 \pi) + \frac{1}{2} (\mu ^2 + \sigma^2)
 
